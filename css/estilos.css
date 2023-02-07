@@ -204,8 +204,9 @@ li a:hover{
     text-align: center;
 }
 .fin p{
-    margin-top: 9px;
+    margin-top: 8px;
 }
+
 @media screen and (max-width:700px){
     .inicio{
         flex-direction: column-reverse;
