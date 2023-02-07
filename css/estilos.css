@@ -6,6 +6,14 @@
 :root{
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 1px;
+}
+
 span{
     color: tomato;
     margin: 3px;
@@ -42,7 +50,7 @@ li a:hover{
     color: rgb(18, 153, 25);
     transition: 0.5s;
 }
-.caja1{
+.inicio{
     background-image: url(../imagenes/teclado.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,7 +62,7 @@ li a:hover{
     flex-direction: row;
 }
 .linea{
-    width: 35px;
+    width: 85px;
     height: 4px;
     background: chartreuse;
     margin-bottom: 20px;
@@ -69,13 +77,18 @@ li a:hover{
 .imagen{
     padding: 40px;
     margin-right: 80px;
+    transition: 0.3s;
+}
+.imagen .img:hover{
+    padding: 10px;
+    transition: 0.3s;
 }
 .img{
     border-bottom: 9px solid red;
     justify-content: center;
     align-items: center;
 }
-.caja2{
+.informacion{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -94,6 +107,7 @@ li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: gray;
 }
 .texto3{
     padding: 40px;
@@ -101,16 +115,41 @@ li a:hover{
  .texto3 h1{
      font-size: 40px;
  }
+ .descarga{
+    margin-top:25px;
+    padding: 10px;
+    border-radius: 1pc;
+    text-decoration: none;
+    color: white;
+    background-color:chartreuse;
+ }
  .proyectos{
-     background: rgb(50, 50, 50);
-     color: white;
-     height: 500px;
+    width: 100%;
+    height: 100vh;
+/*    background: rgb(50, 50, 50);*/
+    background-image: url(../imagenes/computador.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
  }
  .titulo{
      padding: 20px;
      font-size: 30px;
  }
+ .raya{
+    width: 80px;
+    height: 5px;
+    background-color: chartreuse;
+    margin-bottom: 20px;
+ }
 .proyectos-realizados{
+    width: inherit;
+    height: 300px;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -123,12 +162,12 @@ li a:hover{
     align-items: center;
     margin:30px;
     background-color: white;
-    color: black;
+    color: gray;
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 0 0 2px rgb(255, 255, 255),0.9em 0.9em 1em rgba(0, 0, 0, 0.3);
     width: 300px;
-    height: 200px;
+    height: 300px;
     transition: 0.5s;
 }
 .cards:hover{
@@ -140,8 +179,64 @@ li a:hover{
     color: white;
     text-decoration: none;
     width: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 10px;
     margin-top: 20px;
+}
+.proyectos-realizados .link:hover{
+    background-color: red;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(40, 40, 40);
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+.fin{
+    color: white;
+    text-align: center;
+}
+.fin p{
+    margin-top: 9px;
+}
+@media screen and (max-width:700px){
+    .inicio{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .texto{
+        padding: 20px;
+        margin-top: 0px;
+    }
+    .imagen{
+        margin-right:1px;
+    }
+    .img{
+        width: 200px;
+        height: 200px;
+    }
+    .informacion{
+        flex-direction: column;
+    }
+    .hijo{
+        width: 100%;
+    }
+    .texto2{
+        width: 100%;
+    }
+    .proyectos{
+        height: 100%;
+    }
+    .proyectos-realizados{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
 }
